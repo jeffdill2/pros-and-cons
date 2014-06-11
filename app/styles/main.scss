@@ -94,9 +94,8 @@ body {
     font-family: Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    width: 230px;
-    overflow-y: auto;
+    font-size: 1em;
+    width: 60%;
 }
 
 .new-argument-container {
@@ -107,7 +106,7 @@ body {
 }
 
 .new-argument-field {
-    width: 300px;
+    width: 350px;
     height: 25px;
     font-family: Helvetica, sans-serif;
     font-size: 16px;
@@ -160,7 +159,7 @@ body {
 
 .radio-button {
     font-family: Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 1.1em;
     font-style: normal;
     font-weight: bolder;
     padding-left: 20px;
@@ -282,5 +281,59 @@ body {
 
     .argument {
         height: 45px;
+    }
+
+    .description {
+        width: 80%;
+    }
+
+    .new-argument-container {
+        width: 350px;
+        height: 150px;
+    }
+
+    .new-argument-field {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .radio-button {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .new-argument-button {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .description {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .description {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .description {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .description {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .description {
+        width: 55%;
     }
 }
