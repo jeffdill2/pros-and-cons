@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>pros and cons</title>
+        <title>Pros and Cons</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
@@ -21,21 +21,74 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!--////////////////////////////////////////////////////////
+        /////////////////////////////// BEGIN USER CREATED HTML HERE
+        /////////////////////////////////////////////////////////-->
+        <div class="new-argument-container">
+            <input type="text" class="new-argument-field" placeholder="Make your argument..."></input>
 
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>Sass</li>
+            <span class="radio-button">
+                <input type="radio" name="new-argument-type" value="pro">PRO</input>
+                <input type="radio" name="new-argument-type" value="con">CON</input>
+                <input type="radio" name="new-argument-type" value="neutral">NEUTRAL</input>
+            </span>
 
-          </ul>
+            <div class="new-argument-button">Submit</div>
         </div>
 
+        <div class="container">
+            <div class="pros">
+                <div class="header">PROS</div>
+            </div>
+
+            <div class="cons">
+                <div class="header">CONS</div>
+            </div>
+
+            <div class="neutrals">
+                <div class="header">NEUTRALS</div>
+            </div>
+        </div>
+
+        <script type="text/template" class="pros-template">
+            <div class="argument">
+                <div class="description"><%= description %></div>
+
+                <div class="delete-button">Delete</div>
+                <div class="neutral-button">Neutral</div>
+                <div class="con-button">Con</div>
+            </div>
+        </script>
+
+        <script type="text/template" class="cons-template">
+            <div class="argument">
+                <div class="description"><%= description %></div>
+
+                <div class="delete-button">Delete</div>
+                <div class="neutral-button">Neutral</div>
+                <div class="pro-button">Pro</div>
+            </div>
+        </script>
+
+        <script type="text/template" class="neutrals-template">
+            <div class="argument">
+                <div class="description"><%= description %></div>
+
+                <div class="delete-button">Delete</div>
+                <div class="con-button">Con</div>
+                <div class="pro-button">Pro</div>
+            </div>
+        </script>
+
+        <!--////////////////////////////////////////////////////////
+        ///////////////////////////////// END USER CREATED HTML HERE
+        /////////////////////////////////////////////////////////-->
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/underscore/underscore.js"></script>
+        <script src="../bower_components/backbone/backbone.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -50,6 +103,10 @@
         </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/models-and-collections.js"></script>
+        <script src="scripts/pros-view.js"></script>
+        <script src="scripts/cons-view.js"></script>
+        <script src="scripts/neutrals-view.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

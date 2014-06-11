@@ -1,31 +1,195 @@
+@import 'variables';
+
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////// BOWER DEFAULTS
+////////////////////////////////////////////////////////////
+
 // bower:scss
 // endbower
-
-body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
-}
-
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-    h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-    }
-}
 
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+
+////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////// TAGS
+////////////////////////////////////////////////////////////
+body {
+    background-color: #EEE;
+}
+
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////////// CONTAINERS
+////////////////////////////////////////////////////////////
+.container {
+    max-width: 1200px;
+    min-width: 800px;
+    max-height: 800px;
+    min-height: 500px;
+    margin: 0 auto;
+    border: 5px solid #444;
+    border-radius: 8px;
+    background-color: #CCC;
+    margin-top: 25px;
+    position: relative;
+}
+
+.header {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 30px;
+    padding-top: 5px;
+    font-family: Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #444;
+    text-align: center;
+}
+
+.pros {
+    width: 33%;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-right: 5px solid #444;
+    position: absolute;
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+.cons {
+    width: 33%;
+    top: 0px;
+    bottom: 0px;
+    left: 33%;
+    border-right: 5px solid #444;
+    position: absolute;
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+.neutrals {
+    width: 33.5%;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+.argument {
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    padding-right: 5px;
+    padding-left: 15px;
+}
+
+.description {
+    font-family: Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    width: 230px;
+}
+
+.new-argument-container {
+    margin: 0 auto;
+    width: 800px;
+    margin-top: 20px;
+}
+
+.new-argument-field {
+    width: 300px;
+    height: 25px;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////// BUTTONS
+////////////////////////////////////////////////////////////
+.pro-button {
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: bold;
+    background-color: green;
+    border-radius: 4px;
+    border: 1px solid $colorWhite;
+    line-height: 25px;
+    text-align: center;
+    color: #FFF;
+    margin-top: -20px;
+    float: right;
+    width: 40px;
+    height: 25px;
+
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+}
+
+.con-button {
+    @extend .pro-button;
+
+    background-color: orange;
+}
+
+.neutral-button {
+    @extend .pro-button;
+
+    background-color: gray;
+}
+
+.delete-button {
+    @extend .pro-button;
+
+    background-color: red;
+}
+
+.radio-button {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bolder;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+.new-argument-button {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    background-color: $colorLightGray;
+    border-radius: 8px;
+    border: 2px solid $colorStoneGray;
+    line-height: 50px;
+    text-align: center;
+    color: $colorMidnightGray;
+    text-shadow: -1px -1px 1px $colorWhite;
+    width: 140px;
+    height: 50px;
+    display: inline-block;
+    margin-left: 30px;
+    box-shadow: inset   1px -2px 1px $colorLightGray,
+                        3px 3px  3px $colorStoneGray;
+
+    &:hover {
+        box-shadow: inset   2px -2px 2px $colorLightGray,
+                            2px 2px  2px $colorMidnightGray;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        cursor: pointer;
+    }
 }
