@@ -37,6 +37,9 @@ function loadArguments() {
 	});
 }
 
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////// EVENTS
+////////////////////////////////////////////////////////////
 $('.new-argument-button').click(function() {
 	var strArgument = $('.new-argument-field').val();
 	var strArgumentType = $('input:radio[name=new-argument-type]:checked').val();
@@ -79,4 +82,38 @@ $('.new-argument-button').click(function() {
 
 	$('.new-argument-field').val('');
 	$('input:radio[name=new-argument-type]').attr('checked', false);
+});
+
+// BUTTONS FOR RESPONSIVE FEATURES
+$('.pros-selector').click(function() {
+	$('.pros').show();
+	$('.pros-selector').css('opacity', '0.5');
+
+	$('.cons').hide();
+	$('.cons-selector').css('opacity', '1');
+
+	$('.neutrals').hide();
+	$('.neutrals-selector').css('opacity', '1');
+});
+
+$('.cons-selector').click(function() {
+	$('.pros').hide();
+	$('.pros-selector').css('opacity', '1');
+
+	$('.cons').show();
+	$('.cons-selector').css('opacity', '0.5');
+
+	$('.neutrals').hide();
+	$('.neutrals-selector').css('opacity', '1');
+});
+
+$('.neutrals-selector').click(function() {
+	$('.pros').hide();
+	$('.pros-selector').css('opacity', '1');
+
+	$('.cons').hide();
+	$('.cons-selector').css('opacity', '1');
+
+	$('.neutrals').show();
+	$('.neutrals-selector').css('opacity', '0.5');
 });
