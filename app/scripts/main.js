@@ -3,9 +3,13 @@
 ////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////// GLOBALS
 ////////////////////////////////////////////////////////////
-var prosCollection = new ProsCollection();
-var consCollection = new ConsCollection();
-var neutralsCollection = new NeutralsCollection();
+var strProURL = 'http://tiny-pizza-server.herokuapp.com/collections/jdill-pro';
+var strConURL = 'http://tiny-pizza-server.herokuapp.com/collections/jdill-con';
+var strNeutralURL = 'http://tiny-pizza-server.herokuapp.com/collections/jdill-neutral';
+
+var prosCollection = new ArgumentCollection({url: strProURL});
+var consCollection = new ArgumentCollection({url: strConURL});
+var neutralsCollection = new ArgumentCollection({url: strNeutralURL});
 
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////// PAGE LOAD
