@@ -19,11 +19,27 @@
 ////////////////////////////////////////////////////////////
 body {
     background-color: $colorFogGray;
+    padding: 0px;
+    margin: 0px;
 }
 
 ////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////// CONTAINERS
 ////////////////////////////////////////////////////////////
+.header {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 70px;
+    background-color: $colorMidnightGray;
+
+    & img {
+        height: 70px;
+        padding-top: 3px;
+        margin-left: 10%;
+    }
+}
+
 .container {
     max-width: 1200px;
     min-height: 500px;
@@ -35,7 +51,7 @@ body {
     position: relative;
 }
 
-.header {
+.column-header {
     top: 0px;
     right: 0px;
     left: 0px;
@@ -243,12 +259,16 @@ body {
 ///////////////////////////////////////////////// RESPONSIVE
 ////////////////////////////////////////////////////////////
 @media screen and (max-width: 1080px) {
+    .header {
+        text-align: center;
+    }
+
     .container {
         border: 0px;
         min-height: 0px;
     }
 
-    .header {
+    .column-header {
         display: none;
     }
 
@@ -294,6 +314,7 @@ body {
 
     .new-argument-field {
         display: block;
+        margin: 0 auto;
         margin-bottom: 20px;
     }
 
