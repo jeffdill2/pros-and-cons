@@ -24,19 +24,19 @@ $(document).ready(function() {
 function loadArguments() {
 	prosCollection.fetch().done(function() {
 		prosCollection.each(function(pro) {
-			new ProsView({model: pro});
+			new ArgumentView({model: pro, type: 'pros'});
 		});
 	});
 
 	consCollection.fetch().done(function() {
 		consCollection.each(function(con) {
-			new ConsView({model: con});
+			new ArgumentView({model: con, type: 'cons'});
 		});
 	});
 
 	neutralsCollection.fetch().done(function() {
 		neutralsCollection.each(function(neutral) {
-			new NeutralsView({model: neutral});
+			new ArgumentView({model: neutral, type: 'neutrals'});
 		});
 	});
 }
@@ -62,21 +62,21 @@ $('.new-argument-button').click(function() {
 		case 'pro':
 			var objModel = prosCollection.add({description: strArgument});
 			objModel.save();
-			new ProsView({model: objModel});
+			new ArgumentView({model: objModel, type: 'pros'});
 
 			break;
 
 		case 'con':
 			var objModel = consCollection.add({description: strArgument});
 			objModel.save();
-			new ConsView({model: objModel});
+			new ArgumentView({model: objModel, type: 'cons'});
 
 			break;
 
 		case 'neutral':
 			var objModel = neutralsCollection.add({description: strArgument});
 			objModel.save();
-			new NeutralsView({model: objModel});
+			new ArgumentView({model: objModel, type: 'neutrals'});
 
 			break;
 
