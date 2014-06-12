@@ -9,8 +9,8 @@
 
 .browsehappy {
     margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
+    background: $colorLightGray;
+    color: $colorBlack;
     padding: 0.2em 0;
 }
 
@@ -18,7 +18,7 @@
 /////////////////////////////////////////////////////// TAGS
 ////////////////////////////////////////////////////////////
 body {
-    background-color: #EEE;
+    background-color: $colorFogGray;
 }
 
 ////////////////////////////////////////////////////////////
@@ -28,9 +28,9 @@ body {
     max-width: 1200px;
     min-height: 500px;
     margin: 0 auto;
-    border: 5px solid #444;
+    border: 5px solid $colorMidnightGray;
     border-radius: 8px;
-    background-color: #CCC;
+    background-color: $colorLightGray;
     margin-top: 25px;
     position: relative;
 }
@@ -42,11 +42,11 @@ body {
     height: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: Helvetica, sans-serif;
+    font-family: $fontHelvetica;
     font-style: normal;
     font-weight: bolder;
-    font-size: 20px;
-    color: #444;
+    font-size: $fontSize20px;
+    color: $colorMidnightGray;
     text-align: center;
 }
 
@@ -55,7 +55,7 @@ body {
     top: 0px;
     bottom: 0px;
     left: 0px;
-    border-right: 5px solid #444;
+    border-right: 5px solid $colorMidnightGray;
     position: absolute;
     overflow: auto;
     padding-bottom: 10px;
@@ -66,7 +66,7 @@ body {
     top: 0px;
     bottom: 0px;
     left: 33%;
-    border-right: 5px solid #444;
+    border-right: 5px solid $colorMidnightGray;
     position: absolute;
     overflow: auto;
     padding-bottom: 10px;
@@ -91,10 +91,10 @@ body {
 }
 
 .description {
-    font-family: Helvetica, sans-serif;
+    font-family: $fontHelvetica;
     font-style: normal;
     font-weight: normal;
-    font-size: 1em;
+    font-size: $fontSize16px;
     width: 60%;
 }
 
@@ -108,8 +108,8 @@ body {
 .new-argument-field {
     width: 350px;
     height: 25px;
-    font-family: Helvetica, sans-serif;
-    font-size: 16px;
+    font-family: $fontHelvetica;
+    font-size: $fontSize16px;
     font-style: normal;
     font-weight: bold;
 }
@@ -118,8 +118,8 @@ body {
 //////////////////////////////////////////////////// BUTTONS
 ////////////////////////////////////////////////////////////
 .pro-button {
-    font-family: Helvetica, sans-serif;
-    font-size: 10px;
+    font-family: $fontHelvetica;
+    font-size: $fontSize10px;
     font-style: normal;
     font-weight: bold;
     background-color: green;
@@ -127,7 +127,7 @@ body {
     border: 1px solid $colorWhite;
     line-height: 25px;
     text-align: center;
-    color: #FFF;
+    color: $colorWhite;
     margin-top: -20px;
     float: right;
     width: 40px;
@@ -158,8 +158,8 @@ body {
 }
 
 .radio-button {
-    font-family: Helvetica, sans-serif;
-    font-size: 1.1em;
+    font-family: $fontHelvetica;
+    font-size: $fontSize18px;
     font-style: normal;
     font-weight: bolder;
     padding-left: 20px;
@@ -167,11 +167,11 @@ body {
 }
 
 .new-argument-button {
-    font-family: Helvetica, sans-serif;
-    font-size: 20px;
+    font-family: $fontHelvetica;
+    font-size: $fontSize20px;
     font-style: normal;
     font-weight: bold;
-    background-color: $colorLightGray;
+    background-color: $colorHazyGray;
     border-radius: 8px;
     border: 2px solid $colorStoneGray;
     line-height: 50px;
@@ -205,19 +205,19 @@ body {
 .base-selector {
     width: 33.333333%;
     height: 40px;
-    font-family: Helvetica, sans-serif;
-    font-size: 20px;
+    font-family: $fontHelvetica;
+    font-size: $fontSize20px;
     font-style: normal;
     font-weight: bold;
-    background-color: #555;
-    color: #FFF;
+    background-color: $colorDeepGray;
+    color: $colorWhite;
     text-align: center;
     line-height: 40px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    border-top: 3px solid #AAA;
-    border-bottom: 6px solid #AAA;
-    border-left: 3px solid #AAA;
+    border-top: 3px solid $colorStoneGray;
+    border-bottom: 6px solid $colorStoneGray;
+    border-left: 3px solid $colorStoneGray;
 
     &:hover {
         cursor: pointer;
@@ -236,7 +236,7 @@ body {
 .neutrals-selector {
     @extend .base-selector;
 
-    border-right: 3px solid #AAA;
+    border-right: 3px solid $colorStoneGray;
 }
 
 ////////////////////////////////////////////////////////////
