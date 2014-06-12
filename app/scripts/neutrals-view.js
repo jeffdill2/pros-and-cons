@@ -20,6 +20,7 @@ var NeutralsView = Backbone.View.extend({
 	render: function() {
 		var neutralsRendered = this.neutralsTemplate(this.model.attributes);
 		this.$el.html(neutralsRendered);
+		return this;
 	},
 
 	moveToPros: function() {

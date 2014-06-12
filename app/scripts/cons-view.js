@@ -20,6 +20,7 @@ var ConsView = Backbone.View.extend({
 	render: function() {
 		var consRendered = this.consTemplate(this.model.attributes);
 		this.$el.html(consRendered);
+		return this;
 	},
 
 	moveToPros: function() {
